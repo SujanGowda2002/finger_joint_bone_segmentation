@@ -1,0 +1,4 @@
+experiment_name,joints_used,num_samples,loss_function,input_size,batch_size,epochs,best_val_dice,best_val_iou,eval_dice,eval_iou,notes
+unet_pip2_dice_only,pip2,9,DiceLoss,176x176,4,30,0.9488,0.9027,0.9488,0.9027,Initial seed-set proof of concept on pip2 only
+unet_pip2_dice_bce,pip2,9,DiceBCELoss,176x176,4,30,0.9559,0.9156,0.9559,0.9156,"Slight improvement over Dice-only, but training was unstable due to tiny dataset"
+unet_pip2_dip2_dice_bce,pip2+dip2,14,DiceBCELoss,176x176,4,30,0.9292,0.8677,0.9382,0.8842,Mixed-joint experiment with slightly lower but still strong performance
