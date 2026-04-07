@@ -69,7 +69,7 @@ def main():
     criterion = DiceBCELoss(dice_weight=0.5, bce_weight=0.5)    
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
     best_val_dice = 0.0
-    num_epochs = 30
+    num_epochs = 100
 
     for epoch in range(num_epochs):
         model.train()
