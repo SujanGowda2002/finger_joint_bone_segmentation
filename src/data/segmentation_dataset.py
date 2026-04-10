@@ -32,30 +32,47 @@ class FingerSegmentationDataset(Dataset):
         if len(self.samples) == 0:
             raise ValueError(f"No matching image-mask pairs found for joints={self.joints}")
 
+    def _is_valid_image_file(self, filename: str) -> bool:
+        return filename.lower().endswith((".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"))
+
+    def _normalize_image_key(self, filename: str) -> str:
+        stem = os.path.splitext(filename)[0].lower()
+        if stem.endswith("_image"):
+            stem = stem[:-6]
+        return stem
+
+    def _normalize_mask_key(self, filename: str) -> str:
+        stem = os.path.splitext(filename)[0].lower()
+        if stem.endswith("_mask"):
+            stem = stem[:-5]
+        return stem
+
+    def _contains_target_joint(self, key: str) -> bool:
+        return any(f"_{joint}" in key for joint in self.joints)
+
     def _collect_pairs(self) -> List[Tuple[str, str]]:
-        image_files = sorted(os.listdir(self.image_dir))
-        mask_files = set(os.listdir(self.mask_dir))
+        image_files = sorted(
+            [f for f in os.listdir(self.image_dir) if self._is_valid_image_file(f)]
+        )
+        mask_files = sorted(
+            [f for f in os.listdir(self.mask_dir) if self._is_valid_image_file(f)]
+        )
+
+        mask_lookup = {}
+        for mask_name in mask_files:
+            key = self._normalize_mask_key(mask_name)
+            mask_lookup[key] = mask_name
 
         pairs = []
 
         for image_name in image_files:
-            if not image_name.endswith("_image.png"):
+            image_key = self._normalize_image_key(image_name)
+
+            if not self._contains_target_joint(image_key):
                 continue
 
-            matched_joint = None
-            for joint in self.joints:
-                if f"_{joint}_image.png" in image_name:
-                    matched_joint = joint
-                    break
-
-            if matched_joint is None:
-                continue
-
-            base_key = image_name.replace("_image.png", "")
-            mask_name = f"{base_key}_mask.png"
-
-            if mask_name in mask_files:
-                pairs.append((image_name, mask_name))
+            if image_key in mask_lookup:
+                pairs.append((image_name, mask_lookup[image_key]))
 
         return pairs
 
