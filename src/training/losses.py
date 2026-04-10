@@ -3,45 +3,68 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class DiceLoss(nn.Module):
-    def __init__(self, smooth=1e-6):
+class MultiClassDiceLoss(nn.Module):
+    def __init__(self, num_classes=3, smooth=1e-6, include_background=False):
         super().__init__()
+        self.num_classes = num_classes
         self.smooth = smooth
+        self.include_background = include_background
 
     def forward(self, logits, targets):
-        probs = torch.sigmoid(logits)
+        """
+        logits:  [B, C, H, W]
+        targets: [B, H, W] with values in {0,1,2}
+        """
+        probs = F.softmax(logits, dim=1)
+        targets_one_hot = F.one_hot(targets, num_classes=self.num_classes).permute(0, 3, 1, 2).float()
 
-        probs = probs.view(-1)
-        targets = targets.view(-1)
+        if self.include_background:
+            class_indices = range(self.num_classes)
+        else:
+            class_indices = range(1, self.num_classes)
 
-        intersection = (probs * targets).sum()
-        dice = (2.0 * intersection + self.smooth) / (
-            probs.sum() + targets.sum() + self.smooth
-        )
+        dice_losses = []
 
-        return 1.0 - dice
+        for c in class_indices:
+            pred_c = probs[:, c, :, :]
+            target_c = targets_one_hot[:, c, :, :]
+
+            intersection = (pred_c * target_c).sum(dim=(1, 2))
+            union = pred_c.sum(dim=(1, 2)) + target_c.sum(dim=(1, 2))
+
+            dice = (2.0 * intersection + self.smooth) / (union + self.smooth)
+            dice_losses.append(1.0 - dice.mean())
+
+        return sum(dice_losses) / len(dice_losses)
 
 
-class DiceBCELoss(nn.Module):
-    def __init__(self, dice_weight=0.5, bce_weight=0.5, smooth=1e-6):
+class CrossEntropyDiceLoss(nn.Module):
+    def __init__(
+        self,
+        num_classes=3,
+        ce_weight=0.5,
+        dice_weight=0.5,
+        include_background_in_dice=False,
+        class_weights=None,
+    ):
         super().__init__()
+
+        self.num_classes = num_classes
+        self.ce_weight = ce_weight
         self.dice_weight = dice_weight
-        self.bce_weight = bce_weight
-        self.smooth = smooth
-        self.bce = nn.BCEWithLogitsLoss()
+
+        if class_weights is not None:
+            class_weights = torch.tensor(class_weights, dtype=torch.float32)
+            self.register_buffer("class_weights", class_weights)
+        else:
+            self.class_weights = None
+
+        self.dice = MultiClassDiceLoss(
+            num_classes=num_classes,
+            include_background=include_background_in_dice
+        )
 
     def forward(self, logits, targets):
-        probs = torch.sigmoid(logits)
-
-        probs_flat = probs.view(-1)
-        targets_flat = targets.view(-1)
-
-        intersection = (probs_flat * targets_flat).sum()
-        dice = (2.0 * intersection + self.smooth) / (
-            probs_flat.sum() + targets_flat.sum() + self.smooth
-        )
-        dice_loss = 1.0 - dice
-
-        bce_loss = self.bce(logits, targets)
-
-        return self.dice_weight * dice_loss + self.bce_weight * bce_loss
+        ce_loss = F.cross_entropy(logits, targets, weight=self.class_weights)
+        dice_loss = self.dice(logits, targets)
+        return self.ce_weight * ce_loss + self.dice_weight * dice_loss

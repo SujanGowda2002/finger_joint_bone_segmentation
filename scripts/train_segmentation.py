@@ -4,6 +4,7 @@ import csv
 import random
 
 import torch
+import torch.nn.functional as F
 from torch.utils.data import DataLoader, random_split
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -12,14 +13,51 @@ if PROJECT_ROOT not in sys.path:
 
 from src.data.segmentation_dataset import FingerSegmentationDataset
 from src.models.unet import UNet
-from src.training.losses import DiceBCELoss
-from src.evaluation.metrics import dice_score, iou_score
+from src.training.losses import CrossEntropyDiceLoss
 
 
 def set_seed(seed: int = 42):
     random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+
+
+def multiclass_dice_score(logits, targets, num_classes=3, include_background=False, smooth=1e-6):
+    preds = torch.argmax(logits, dim=1)
+    dices = []
+
+    class_range = range(num_classes) if include_background else range(1, num_classes)
+
+    for c in class_range:
+        pred_c = (preds == c).float()
+        target_c = (targets == c).float()
+
+        intersection = (pred_c * target_c).sum(dim=(1, 2))
+        union = pred_c.sum(dim=(1, 2)) + target_c.sum(dim=(1, 2))
+
+        dice = (2.0 * intersection + smooth) / (union + smooth)
+        dices.append(dice.mean().item())
+
+    return sum(dices) / len(dices)
+
+
+def multiclass_iou_score(logits, targets, num_classes=3, include_background=False, smooth=1e-6):
+    preds = torch.argmax(logits, dim=1)
+    ious = []
+
+    class_range = range(num_classes) if include_background else range(1, num_classes)
+
+    for c in class_range:
+        pred_c = (preds == c).float()
+        target_c = (targets == c).float()
+
+        intersection = (pred_c * target_c).sum(dim=(1, 2))
+        union = pred_c.sum(dim=(1, 2)) + target_c.sum(dim=(1, 2)) - intersection
+
+        iou = (intersection + smooth) / (union + smooth)
+        ious.append(iou.mean().item())
+
+    return sum(ious) / len(ious)
 
 
 def evaluate(model, loader, criterion, device):
@@ -34,12 +72,12 @@ def evaluate(model, loader, criterion, device):
             images = batch["image"].to(device)
             masks = batch["mask"].to(device)
 
-            outputs = model(images)
-            loss = criterion(outputs, masks)
+            logits = model(images)
+            loss = criterion(logits, masks)
 
             total_loss += loss.item()
-            total_dice += dice_score(outputs, masks)
-            total_iou += iou_score(outputs, masks)
+            total_dice += multiclass_dice_score(logits, masks)
+            total_iou += multiclass_iou_score(logits, masks)
             count += 1
 
     if count == 0:
@@ -58,8 +96,8 @@ def train_one_epoch(model, loader, criterion, optimizer, device):
         masks = batch["mask"].to(device)
 
         optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, masks)
+        logits = model(images)
+        loss = criterion(logits, masks)
         loss.backward()
         optimizer.step()
 
@@ -85,11 +123,8 @@ def save_history_csv(history, save_path):
 
 
 def main():
-    # -----------------------------
-    # Configuration
-    # -----------------------------
     seed = 42
-    joints = ["pip2", "pip3", "pip4", "pip5", "dip2", "dip3", "dip4", "dip5"]
+    joints = ["pip2", "dip2"]
     batch_size = 4
     learning_rate = 1e-3
     num_epochs = 100
@@ -98,7 +133,7 @@ def main():
     image_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "images")
     mask_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "masks")
 
-    experiment_name = f"unet_{'_'.join(joints)}_dice_bce"
+    experiment_name = f"unet_multiclass_{'_'.join(joints)}"
     checkpoint_dir = os.path.join(PROJECT_ROOT, "outputs", "checkpoints")
     logs_dir = os.path.join(PROJECT_ROOT, "outputs", "training_logs")
 
@@ -127,24 +162,24 @@ def main():
         joints=joints,
     )
 
-    total_samples = len(dataset)
-    print(f"Total samples for joints {joints}: {total_samples}")
+    print(f"Total samples for joints {joints}: {len(dataset)}")
+    print("First 10 pairs:")
+    for sample in dataset.samples[:10]:
+        print(sample)
 
-    if total_samples < 2:
-        raise ValueError(
-            f"Need at least 2 image-mask pairs for train/validation split, found {total_samples}."
-        )
+    if len(dataset) < 2:
+        raise ValueError(f"Need at least 2 samples, found {len(dataset)}")
 
-    train_size = int(train_ratio * total_samples)
-    val_size = total_samples - train_size
+    train_size = int(train_ratio * len(dataset))
+    val_size = len(dataset) - train_size
 
     if train_size == 0:
         train_size = 1
-        val_size = total_samples - 1
+        val_size = len(dataset) - 1
 
     if val_size == 0:
         val_size = 1
-        train_size = total_samples - 1
+        train_size = len(dataset) - 1
 
     train_dataset, val_dataset = random_split(
         dataset,
@@ -171,8 +206,16 @@ def main():
         pin_memory=pin_memory,
     )
 
-    model = UNet(in_channels=1, out_channels=1).to(device)
-    criterion = DiceBCELoss(dice_weight=0.5, bce_weight=0.5)
+    model = UNet(in_channels=1, out_channels=3).to(device)
+
+    criterion = CrossEntropyDiceLoss(
+        num_classes=3,
+        ce_weight=0.5,
+        dice_weight=0.5,
+        include_background_in_dice=False,
+        class_weights=[1.0, 2.0, 2.0],
+    ).to(device)
+
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
     best_val_dice = 0.0
