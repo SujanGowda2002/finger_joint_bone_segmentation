@@ -4,8 +4,8 @@ import csv
 import random
 
 import torch
-import torch.nn.functional as F
 from torch.utils.data import DataLoader, random_split
+import matplotlib.pyplot as plt
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if PROJECT_ROOT not in sys.path:
@@ -122,6 +122,31 @@ def save_history_csv(history, save_path):
         writer.writerows(history)
 
 
+def plot_training_history(history, save_path):
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+
+    epochs = [row["epoch"] for row in history]
+    train_loss = [row["train_loss"] for row in history]
+    val_loss = [row["val_loss"] for row in history]
+    val_dice = [row["val_dice"] for row in history]
+    val_iou = [row["val_iou"] for row in history]
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(epochs, train_loss, label="Train Loss", linewidth=2)
+    plt.plot(epochs, val_loss, label="Validation Loss", linewidth=2)
+    plt.plot(epochs, val_dice, label="Validation Dice", linewidth=2)
+    plt.plot(epochs, val_iou, label="Validation IoU", linewidth=2)
+
+    plt.xlabel("Epoch")
+    plt.ylabel("Value")
+    plt.title("Training History")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=300)
+    plt.close()
+
+
 def main():
     seed = 42
     joints = ["pip2", "dip2"]
@@ -140,6 +165,7 @@ def main():
     best_checkpoint_path = os.path.join(checkpoint_dir, f"best_{experiment_name}.pth")
     last_checkpoint_path = os.path.join(checkpoint_dir, f"last_{experiment_name}.pth")
     history_csv_path = os.path.join(logs_dir, f"{experiment_name}_history.csv")
+    plot_path = os.path.join(logs_dir, f"{experiment_name}_history_plot.png")
 
     set_seed(seed)
 
@@ -250,9 +276,11 @@ def main():
             print(f"Saved best model to: {best_checkpoint_path}")
 
     save_history_csv(history, history_csv_path)
+    plot_training_history(history, plot_path)
 
     print(f"Best validation Dice: {best_val_dice:.4f}")
     print(f"Saved training history to: {history_csv_path}")
+    print(f"Saved training plot to: {plot_path}")
     print(f"Saved last checkpoint to: {last_checkpoint_path}")
 
 
