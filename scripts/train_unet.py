@@ -139,7 +139,7 @@ def plot_training_history(history, save_path):
 
     plt.xlabel("Epoch")
     plt.ylabel("Value")
-    plt.title("Training History")
+    plt.title("U-Net Training History")
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
