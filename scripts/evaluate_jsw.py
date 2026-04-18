@@ -9,12 +9,12 @@ LOWER_BONE = 2
 
 
 MODEL_DIRS = {
-    "unet": "outputs/segmentation_inference_unet_multiclass_pip2_dip2",
-    "attention_unet": "outputs/segmentation_inference_attention_unet_multiclass_pip2_dip2",
-    "deeplabv3": "outputs/segmentation_inference_deeplabv3_multiclass_pip2_dip2",
+    "unet": "outputs/segmentation_inference_unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5",
+    "attention_unet": "outputs/segmentation_inference_attention_unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5",
+    "deeplabv3": "outputs/segmentation_inference_deeplabv3_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5",
 }
 
-OUTPUT_DIR = "outputs/jsw_results"
+OUTPUT_DIR = "outputs/jsw_results_expanded"
 
 
 def load_mask(path):
@@ -30,10 +30,7 @@ def load_mask(path):
 
     class_mask = np.zeros(mask.shape, dtype=np.uint8)
 
-    # Gray region = upper bone
     class_mask[(mask >= 80) & (mask < 200)] = UPPER_BONE
-
-    # White region = lower bone
     class_mask[mask >= 200] = LOWER_BONE
 
     return class_mask
@@ -115,32 +112,24 @@ def evaluate_model(model_name, inference_dir):
         abs_error = abs(gt_jsw["mean"] - pred_jsw["mean"])
         percent_error = (
             abs_error / gt_jsw["mean"] * 100
-            if gt_jsw["mean"] != 0
-            else 0
+            if gt_jsw["mean"] != 0 else 0
         )
 
         rows.append({
             "model": model_name,
             "sample": base_name,
-
             "gt_mean_jsw_px": gt_jsw["mean"],
             "pred_mean_jsw_px": pred_jsw["mean"],
-
             "gt_median_jsw_px": gt_jsw["median"],
             "pred_median_jsw_px": pred_jsw["median"],
-
             "gt_min_jsw_px": gt_jsw["min"],
             "pred_min_jsw_px": pred_jsw["min"],
-
             "gt_max_jsw_px": gt_jsw["max"],
             "pred_max_jsw_px": pred_jsw["max"],
-
             "gt_std_jsw_px": gt_jsw["std"],
             "pred_std_jsw_px": pred_jsw["std"],
-
             "gt_valid_columns": gt_jsw["valid_columns"],
             "pred_valid_columns": pred_jsw["valid_columns"],
-
             "abs_error_px": abs_error,
             "percent_error": percent_error,
         })

@@ -103,10 +103,15 @@ def main():
     image_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "images")
     mask_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "masks")
 
-    joints = ["pip2", "dip2"]
-    experiment_name = f"attention_unet_multiclass_{'_'.join(joints)}"
+    joints = [
+        "pip2", "dip2",
+        "pip3", "dip3",
+        "pip4", "dip4",
+        "pip5", "dip5",
+    ]
 
-    # Same parent directories as U-Net, but different experiment names/folders
+    experiment_name = "attention_unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5"
+
     checkpoint_path = os.path.join(
         PROJECT_ROOT, "outputs", "checkpoints", f"best_{experiment_name}.pth"
     )
@@ -125,7 +130,13 @@ def main():
 
     print(f"Total samples for joints {joints}: {len(dataset)}")
 
-    loader = DataLoader(dataset, batch_size=2, shuffle=False)
+    loader = DataLoader(
+        dataset,
+        batch_size=2,
+        shuffle=False,
+        num_workers=2,
+        pin_memory=(device.type == "cuda"),
+    )
 
     model = AttentionUNet(in_channels=1, out_channels=3).to(device)
 

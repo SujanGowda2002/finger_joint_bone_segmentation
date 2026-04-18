@@ -149,7 +149,14 @@ def plot_training_history(history, save_path):
 
 def main():
     seed = 42
-    joints = ["pip2", "dip2"]
+
+    joints = [
+        "pip2", "dip2",
+        "pip3", "dip3",
+        "pip4", "dip4",
+        "pip5", "dip5",
+    ]
+
     batch_size = 4
     learning_rate = 1e-3
     num_epochs = 100
@@ -158,8 +165,7 @@ def main():
     image_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "images")
     mask_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "masks")
 
-    # Same parent folders as U-Net, but different experiment name so files are not overwritten
-    experiment_name = f"attention_unet_multiclass_{'_'.join(joints)}"
+    experiment_name = "attention_unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5"
     checkpoint_dir = os.path.join(PROJECT_ROOT, "outputs", "checkpoints")
     logs_dir = os.path.join(PROJECT_ROOT, "outputs", "training_logs")
 
