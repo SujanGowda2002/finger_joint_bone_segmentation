@@ -150,12 +150,12 @@ def plot_training_history(history, save_path):
 def main():
     seed = 42
 
-    # Expanded joint list
     joints = [
         "pip2", "dip2",
         "pip3", "dip3",
         "pip4", "dip4",
         "pip5", "dip5",
+        "mcp2", "mcp3", "mcp4", "mcp5",
     ]
 
     batch_size = 4
@@ -163,12 +163,10 @@ def main():
     num_epochs = 100
     train_ratio = 0.8
 
-    # Keep same folder logic.
-    # Change these only if your expanded merged dataset is in a different folder.
     image_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "images")
     mask_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "masks")
 
-    experiment_name = "unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5"
+    experiment_name = "unet_multiclass_all_joints"
     checkpoint_dir = os.path.join(PROJECT_ROOT, "outputs", "checkpoints")
     logs_dir = os.path.join(PROJECT_ROOT, "outputs", "training_logs")
 

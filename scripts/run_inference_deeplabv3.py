@@ -97,9 +97,10 @@ def main():
         "pip3", "dip3",
         "pip4", "dip4",
         "pip5", "dip5",
+        "mcp2", "mcp3", "mcp4", "mcp5",
     ]
 
-    experiment_name = "deeplabv3_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5"
+    experiment_name = "deeplabv3_multiclass_all_joints"
 
     checkpoint_path = os.path.join(
         PROJECT_ROOT, "outputs", "checkpoints", f"best_{experiment_name}.pth"

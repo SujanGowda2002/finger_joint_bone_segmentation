@@ -9,9 +9,9 @@ LOWER_BONE = 2
 
 
 MODEL_DIRS = {
-    "unet": "outputs/segmentation_inference_unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5",
-    "attention_unet": "outputs/segmentation_inference_attention_unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5",
-    "deeplabv3": "outputs/segmentation_inference_deeplabv3_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5",
+    "unet": "outputs/segmentation_inference_unet_multiclass_all_joints",
+    "attention_unet": "outputs/segmentation_inference_attention_unet_multiclass_all_joints",
+    "deeplabv3": "outputs/segmentation_inference_deeplabv3_multiclass_all_joints",
 }
 
 OUTPUT_DIR = "outputs/jsw_results_expanded"

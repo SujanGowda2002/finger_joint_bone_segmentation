@@ -155,6 +155,7 @@ def main():
         "pip3", "dip3",
         "pip4", "dip4",
         "pip5", "dip5",
+        "mcp2", "mcp3", "mcp4", "mcp5",
     ]
 
     batch_size = 4
@@ -165,7 +166,7 @@ def main():
     image_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "images")
     mask_dir = os.path.join(PROJECT_ROOT, "data", "segmentation_seed", "masks")
 
-    experiment_name = "attention_unet_multiclass_pip2_dip2_pip3_dip3_pip4_dip4_pip5_dip5"
+    experiment_name = "attention_unet_multiclass_all_joints"
     checkpoint_dir = os.path.join(PROJECT_ROOT, "outputs", "checkpoints")
     logs_dir = os.path.join(PROJECT_ROOT, "outputs", "training_logs")
 
