@@ -21,7 +21,7 @@ def main():
             "best_val_iou": 0.9027,
             "eval_dice": 0.9488,
             "eval_iou": 0.9027,
-            "notes": "Initial seed-set proof of concept on pip2 only"
+            "notes": "Initial seed-set proof of concept on pip2 only",
         },
         {
             "experiment_name": "unet_pip2_dice_bce",
@@ -35,7 +35,7 @@ def main():
             "best_val_iou": 0.9156,
             "eval_dice": 0.9559,
             "eval_iou": 0.9156,
-            "notes": "Slight improvement over Dice-only, but training was unstable due to tiny dataset"
+            "notes": "Slight improvement over Dice-only, but training was unstable due to tiny dataset",
         },
         {
             "experiment_name": "unet_pip2_dip2_dice_bce",
@@ -49,7 +49,7 @@ def main():
             "best_val_iou": 0.8677,
             "eval_dice": 0.9382,
             "eval_iou": 0.8842,
-            "notes": "Mixed-joint experiment with slightly lower but still strong performance"
+            "notes": "Mixed-joint experiment with slightly lower but still strong performance",
         },
     ]
 
