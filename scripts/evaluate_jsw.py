@@ -9,12 +9,12 @@ LOWER_BONE = 2
 
 
 MODEL_DIRS = {
-    "unet": "outputs/segmentation_inference_unet_multiclass_all_joints",
-    "attention_unet": "outputs/segmentation_inference_attention_unet_multiclass_all_joints",
-    "deeplabv3": "outputs/segmentation_inference_deeplabv3_multiclass_all_joints",
+    "unet": "outputs/segmentation_inference_unet_multiclass_all_joints_test",
+    "attention_unet": "outputs/segmentation_inference_attention_unet_multiclass_all_joints_test",
+    "deeplabv3": "outputs/segmentation_inference_deeplabv3_multiclass_all_joints_test",
 }
 
-OUTPUT_DIR = "outputs/jsw_results_expanded"
+OUTPUT_DIR = "outputs/jsw_results_test"
 
 
 def load_mask(path):
@@ -162,7 +162,7 @@ def main():
 
         rows = evaluate_model(model_name, inference_dir)
 
-        output_csv = os.path.join(OUTPUT_DIR, f"{model_name}_jsw.csv")
+        output_csv = os.path.join(OUTPUT_DIR, f"{model_name}_jsw_test.csv")
         save_csv(output_csv, rows)
 
         if rows:
@@ -182,7 +182,7 @@ def main():
             print(f"Mean absolute JSW error: {mean_abs_error:.4f} px")
             print(f"Mean percentage JSW error: {mean_percent_error:.2f}%")
 
-    summary_csv = os.path.join(OUTPUT_DIR, "jsw_model_summary.csv")
+    summary_csv = os.path.join(OUTPUT_DIR, "jsw_model_summary_test.csv")
     save_csv(summary_csv, summary_rows)
 
     print(f"\nCombined summary saved to: {summary_csv}")
