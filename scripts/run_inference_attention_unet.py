@@ -1,9 +1,10 @@
 import os
 import sys
+import json
 import shutil
 
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Subset
 from torchvision.utils import save_image
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -51,6 +52,27 @@ def make_multiclass_overlay(image_tensor, class_mask_tensor):
     overlay[2][lower] *= 0.35
 
     return overlay.clamp(0, 1)
+
+
+def load_test_indices(dataset, split_manifest_path):
+    if not os.path.exists(split_manifest_path):
+        raise FileNotFoundError(f"Split manifest not found: {split_manifest_path}")
+
+    with open(split_manifest_path, "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+
+    test_entries = manifest["test"]
+    test_names = set(entry["image_name"] for entry in test_entries)
+
+    test_indices = []
+    for idx, (image_name, mask_name) in enumerate(dataset.samples):
+        if image_name in test_names:
+            test_indices.append(idx)
+
+    if len(test_indices) == 0:
+        raise ValueError("No test samples matched from the split manifest.")
+
+    return test_indices
 
 
 @torch.no_grad()
@@ -116,8 +138,13 @@ def main():
     checkpoint_path = os.path.join(
         PROJECT_ROOT, "outputs", "checkpoints", f"best_{experiment_name}.pth"
     )
+
+    split_manifest_path = os.path.join(
+        PROJECT_ROOT, "outputs", "data_splits", f"{experiment_name}_split.json"
+    )
+
     output_dir = os.path.join(
-        PROJECT_ROOT, "outputs", f"segmentation_inference_{experiment_name}"
+        PROJECT_ROOT, "outputs", f"segmentation_inference_{experiment_name}_test"
     )
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -131,8 +158,13 @@ def main():
 
     print(f"Total samples for joints {joints}: {len(dataset)}")
 
+    test_indices = load_test_indices(dataset, split_manifest_path)
+    test_dataset = Subset(dataset, test_indices)
+
+    print(f"Test samples selected from split manifest: {len(test_dataset)}")
+
     loader = DataLoader(
-        dataset,
+        test_dataset,
         batch_size=2,
         shuffle=False,
         num_workers=2,
@@ -155,7 +187,7 @@ def main():
         max_examples=None
     )
 
-    print(f"Replaced old outputs and saved new inference outputs to: {output_dir}")
+    print(f"Saved test-set inference outputs to: {output_dir}")
 
 
 if __name__ == "__main__":

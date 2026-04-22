@@ -1,266 +1,1742 @@
 {
   "train": [
-    "9024900_dip3.png",
-    "9084244_mcp2.png",
-    "9047519_mcp4.png",
-    "9900971_pip2.png",
-    "9902757_pip2.png",
-    "9065820_pip4.png",
-    "9066677_dip5.png",
-    "9942319_dip2.png",
-    "9903394_pip2.png",
-    "9942935_dip2.png",
-    "9020856_mcp2.png",
-    "9010060_mcp3.png",
-    "9048898_pip3.png",
-    "9942553_dip2.png",
-    "9011115_dip3.png",
-    "9066425_mcp3.png",
-    "9036287_mcp4.png",
-    "9068453_dip4.png",
-    "9050299_mcp4.png",
-    "9002430_mcp4.png",
-    "9073948_dip4.png",
-    "9044005_dip4.png",
-    "9938327_dip2.png",
-    "9030418_dip3.png",
-    "9042459_dip3.png",
-    "9088841_pip4.png",
-    "9065433_dip4.png",
-    "9008934_mcp4.png",
-    "9902772_pip2.png",
-    "9024409_pip5.png",
-    "9061936_mcp4.png",
-    "9006140_mcp2.png",
-    "9902576_pip2.png",
-    "9061936_mcp2.png",
-    "9086407_pip3.png",
-    "9249027_dip5.png",
-    "9088841_dip4.png",
-    "9906008_pip2.png",
-    "9905276_pip2.png",
-    "9043507_pip5.png",
-    "9954735_dip2.png",
-    "9907282_pip2.png",
-    "9020714_mcp3.png",
-    "9022408_mcp5.png",
-    "9897397_pip2.png",
-    "9896392_pip2.png",
-    "9028904_mcp5.png",
-    "9065433_mcp4.png",
-    "9043446_mcp2.png",
-    "9010370_dip3.png",
-    "9043005_pip3.png",
-    "9008934_mcp2.png",
-    "9003380_dip3.png",
-    "9030925_dip4.png",
-    "9025191_dip3.png",
-    "9057976_mcp5.png",
-    "9193863_pip5.png",
-    "9980752_dip5.png",
-    "9947497_dip2.png",
-    "9952108_dip2.png",
-    "9087632_mcp2.png",
-    "9903020_pip2.png",
-    "9952664_dip2.png",
-    "9065433_dip3.png",
-    "9260058_dip5.png",
-    "9207016_pip5.png",
-    "9009927_mcp3.png",
-    "9249027_pip4.png",
-    "9043005_mcp4.png",
-    "9002430_mcp3.png",
-    "9008934_pip5.png",
-    "9006723_dip4.png",
-    "9011420_pip3.png",
-    "9065433_mcp3.png",
-    "9002316_dip3.png",
-    "9047519_mcp2.png",
-    "9011918_dip2.png",
-    "9024900_mcp2.png",
-    "9171714_pip4.png",
-    "9029415_mcp2.png",
-    "9049999_dip3.png",
-    "9024409_mcp2.png",
-    "9902900_pip2.png",
-    "9008934_mcp5.png",
-    "9029415_dip4.png",
-    "9061936_mcp5.png",
-    "9093244_pip4.png",
-    "9174582_pip4.png",
-    "9071669_dip4.png",
-    "9068453_pip4.png",
-    "9255353_pip4.png",
-    "9955276_dip2.png",
-    "9011420_mcp4.png",
-    "9023348_mcp3.png",
-    "9011918_dip4.png",
-    "9079361_pip3.png",
-    "9170920_pip5.png",
-    "9950320_dip2.png",
-    "9008934_dip4.png",
-    "9047519_pip3.png",
-    "9047519_mcp3.png",
-    "9066677_mcp3.png",
-    "9067425_pip3.png",
-    "9953518_dip2.png",
-    "9946473_dip2.png",
-    "9206908_pip5.png",
-    "9008820_dip3.png",
-    "9046012_dip4.png",
-    "9976720_pip4.png",
-    "9907544_pip2.png",
-    "9941446_dip2.png",
-    "9163391_pip5.png",
-    "9044788_mcp2.png",
-    "9043446_pip3.png",
-    "9897279_pip2.png",
-    "9948792_dip2.png",
-    "9003316_mcp3.png",
-    "9047519_pip4.png",
-    "9903777_pip2.png",
-    "9907090_pip2.png",
-    "9119527_pip4.png",
-    "9945335_dip2.png",
-    "9011420_mcp5.png",
-    "9184790_pip4.png",
-    "9113529_pip4.png",
-    "9023407_pip4.png",
-    "9048979_mcp5.png",
-    "9048898_pip5.png",
-    "9044005_mcp4.png",
-    "9905766_pip2.png",
-    "9002430_mcp5.png",
-    "9008934_dip5.png",
-    "9024409_mcp3.png",
-    "9088345_dip5.png",
-    "9973322_mcp5.png",
-    "9020404_mcp3.png",
-    "9061936_dip3.png",
-    "9019907_pip5.png",
-    "9127864_pip3.png",
-    "9942867_dip2.png",
-    "9943317_dip2.png",
-    "9048898_dip3.png",
-    "9234073_dip5.png",
-    "9953183_dip2.png",
-    "9049999_pip5.png",
-    "9949194_dip2.png",
-    "9008934_mcp3.png",
-    "9021791_mcp3.png",
-    "9088841_pip3.png",
-    "9072956_dip4.png",
-    "9096851_pip4.png",
-    "9130641_pip4.png",
-    "9148828_mcp5.png",
-    "9985321_mcp4.png",
-    "9067913_mcp5.png",
-    "9162906_pip4.png",
-    "9006140_mcp4.png",
-    "9943818_dip2.png",
-    "9091337_dip5.png",
-    "9067913_pip3.png",
-    "9043446_mcp4.png",
-    "9896710_pip2.png",
-    "9011420_pip4.png",
-    "9044005_pip5.png",
-    "9023348_mcp2.png",
-    "9010370_dip2.png",
-    "9223040_dip5.png",
-    "9061936_mcp3.png",
-    "9018489_pip3.png",
-    "9119057_pip3.png",
-    "9024900_mcp4.png",
-    "9049999_mcp5.png",
-    "9099360_pip3.png",
-    "9949467_dip2.png",
-    "9013634_dip3.png",
-    "9067425_dip4.png",
-    "9937943_dip2.png",
-    "9066677_mcp2.png",
-    "9063928_dip5.png",
-    "9951122_dip2.png"
+    {
+      "image_name": "9163391_pip5.png",
+      "image_id": "9163391",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9088841_dip4.png",
+      "image_id": "9088841",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9949467_dip2.png",
+      "image_id": "9949467",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9057976_mcp5.png",
+      "image_id": "9057976",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9029415_mcp2.png",
+      "image_id": "9029415",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9023407_mcp3.png",
+      "image_id": "9023407",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9020404_mcp3.png",
+      "image_id": "9020404",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9044788_mcp2.png",
+      "image_id": "9044788",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9841838_pip3.png",
+      "image_id": "9841838",
+      "joint": "pip3",
+      "kl": 4
+    },
+    {
+      "image_name": "9588002_pip4.png",
+      "image_id": "9588002",
+      "joint": "pip4",
+      "kl": 3
+    },
+    {
+      "image_name": "9023407_mcp2.png",
+      "image_id": "9023407",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9555124_dip2.png",
+      "image_id": "9555124",
+      "joint": "dip2",
+      "kl": 3
+    },
+    {
+      "image_name": "9174582_pip5.png",
+      "image_id": "9174582",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9022408_mcp5.png",
+      "image_id": "9022408",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9049999_dip3.png",
+      "image_id": "9049999",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9047519_pip4.png",
+      "image_id": "9047519",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9044005_mcp5.png",
+      "image_id": "9044005",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9174582_pip4.png",
+      "image_id": "9174582",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9902772_pip2.png",
+      "image_id": "9902772",
+      "joint": "pip2",
+      "kl": 2
+    },
+    {
+      "image_name": "9944030_dip2.png",
+      "image_id": "9944030",
+      "joint": "dip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9945335_dip2.png",
+      "image_id": "9945335",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9119527_pip4.png",
+      "image_id": "9119527",
+      "joint": "pip4",
+      "kl": 1
+    },
+    {
+      "image_name": "9061936_dip3.png",
+      "image_id": "9061936",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9029415_dip4.png",
+      "image_id": "9029415",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9063928_dip5.png",
+      "image_id": "9063928",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9919023_dip3.png",
+      "image_id": "9919023",
+      "joint": "dip3",
+      "kl": 4
+    },
+    {
+      "image_name": "9071669_dip4.png",
+      "image_id": "9071669",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9066425_mcp2.png",
+      "image_id": "9066425",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9907800_pip2.png",
+      "image_id": "9907800",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9942935_dip2.png",
+      "image_id": "9942935",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9055038_mcp3.png",
+      "image_id": "9055038",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9952664_dip2.png",
+      "image_id": "9952664",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9058960_pip5.png",
+      "image_id": "9058960",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9002430_mcp3.png",
+      "image_id": "9002430",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9938327_dip2.png",
+      "image_id": "9938327",
+      "joint": "dip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9024409_mcp3.png",
+      "image_id": "9024409",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9002430_mcp4.png",
+      "image_id": "9002430",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9022408_mcp4.png",
+      "image_id": "9022408",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9002430_mcp2.png",
+      "image_id": "9002430",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9048898_dip3.png",
+      "image_id": "9048898",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9065433_mcp4.png",
+      "image_id": "9065433",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9067425_dip4.png",
+      "image_id": "9067425",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9008934_dip4.png",
+      "image_id": "9008934",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9223040_dip5.png",
+      "image_id": "9223040",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9030925_dip4.png",
+      "image_id": "9030925",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9937943_dip2.png",
+      "image_id": "9937943",
+      "joint": "dip2",
+      "kl": 2
+    },
+    {
+      "image_name": "9011420_pip3.png",
+      "image_id": "9011420",
+      "joint": "pip3",
+      "kl": 1
+    },
+    {
+      "image_name": "9902900_pip2.png",
+      "image_id": "9902900",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9905766_pip2.png",
+      "image_id": "9905766",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9019907_pip5.png",
+      "image_id": "9019907",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9011918_dip2.png",
+      "image_id": "9011918",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9228372_dip5.png",
+      "image_id": "9228372",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9225871_pip4.png",
+      "image_id": "9225871",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9155218_dip3.png",
+      "image_id": "9155218",
+      "joint": "dip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9206908_dip5.png",
+      "image_id": "9206908",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9938453_dip2.png",
+      "image_id": "9938453",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9955276_dip2.png",
+      "image_id": "9955276",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9036287_mcp4.png",
+      "image_id": "9036287",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9043005_pip3.png",
+      "image_id": "9043005",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9024409_mcp4.png",
+      "image_id": "9024409",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9897397_pip2.png",
+      "image_id": "9897397",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9896710_pip2.png",
+      "image_id": "9896710",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9258563_dip5.png",
+      "image_id": "9258563",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9669143_pip2.png",
+      "image_id": "9669143",
+      "joint": "pip2",
+      "kl": 3
+    },
+    {
+      "image_name": "9391967_dip3.png",
+      "image_id": "9391967",
+      "joint": "dip3",
+      "kl": 4
+    },
+    {
+      "image_name": "9066677_mcp3.png",
+      "image_id": "9066677",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9998089_dip2.png",
+      "image_id": "9998089",
+      "joint": "dip2",
+      "kl": 4
+    },
+    {
+      "image_name": "9924366_dip2.png",
+      "image_id": "9924366",
+      "joint": "dip2",
+      "kl": 3
+    },
+    {
+      "image_name": "9011420_pip4.png",
+      "image_id": "9011420",
+      "joint": "pip4",
+      "kl": 1
+    },
+    {
+      "image_name": "9941446_dip2.png",
+      "image_id": "9941446",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9054972_dip3.png",
+      "image_id": "9054972",
+      "joint": "dip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9066677_dip4.png",
+      "image_id": "9066677",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9260058_dip5.png",
+      "image_id": "9260058",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9519310_dip3.png",
+      "image_id": "9519310",
+      "joint": "dip3",
+      "kl": 4
+    },
+    {
+      "image_name": "9907282_pip2.png",
+      "image_id": "9907282",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9043005_mcp4.png",
+      "image_id": "9043005",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9065433_dip4.png",
+      "image_id": "9065433",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9030418_dip3.png",
+      "image_id": "9030418",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9065433_dip5.png",
+      "image_id": "9065433",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9946473_dip2.png",
+      "image_id": "9946473",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9905276_pip2.png",
+      "image_id": "9905276",
+      "joint": "pip2",
+      "kl": 2
+    },
+    {
+      "image_name": "9011420_mcp5.png",
+      "image_id": "9011420",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9043005_dip3.png",
+      "image_id": "9043005",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9101076_pip5.png",
+      "image_id": "9101076",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9023348_dip3.png",
+      "image_id": "9023348",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9903777_pip2.png",
+      "image_id": "9903777",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9010370_dip2.png",
+      "image_id": "9010370",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9951122_dip2.png",
+      "image_id": "9951122",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9234073_dip5.png",
+      "image_id": "9234073",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9011115_dip3.png",
+      "image_id": "9011115",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9072956_dip5.png",
+      "image_id": "9072956",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9044005_dip3.png",
+      "image_id": "9044005",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9950320_dip2.png",
+      "image_id": "9950320",
+      "joint": "dip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9043507_pip5.png",
+      "image_id": "9043507",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9023348_mcp3.png",
+      "image_id": "9023348",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9907998_pip2.png",
+      "image_id": "9907998",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9976720_pip4.png",
+      "image_id": "9976720",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9008934_mcp3.png",
+      "image_id": "9008934",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9907767_pip2.png",
+      "image_id": "9907767",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9907090_pip2.png",
+      "image_id": "9907090",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9044005_dip4.png",
+      "image_id": "9044005",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9050299_mcp4.png",
+      "image_id": "9050299",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9065433_dip3.png",
+      "image_id": "9065433",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9088345_dip5.png",
+      "image_id": "9088345",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9061936_mcp2.png",
+      "image_id": "9061936",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9942867_dip2.png",
+      "image_id": "9942867",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9043446_mcp4.png",
+      "image_id": "9043446",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9067425_mcp4.png",
+      "image_id": "9067425",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9067913_pip5.png",
+      "image_id": "9067913",
+      "joint": "pip5",
+      "kl": 1
+    },
+    {
+      "image_name": "9048979_mcp5.png",
+      "image_id": "9048979",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9024900_dip3.png",
+      "image_id": "9024900",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9951449_dip2.png",
+      "image_id": "9951449",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9127864_pip3.png",
+      "image_id": "9127864",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9488861_dip3.png",
+      "image_id": "9488861",
+      "joint": "dip3",
+      "kl": 4
+    },
+    {
+      "image_name": "9006723_dip3.png",
+      "image_id": "9006723",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9988305_pip5.png",
+      "image_id": "9988305",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9067913_mcp5.png",
+      "image_id": "9067913",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9061936_mcp3.png",
+      "image_id": "9061936",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9058469_mcp3.png",
+      "image_id": "9058469",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9011918_dip4.png",
+      "image_id": "9011918",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9023348_pip4.png",
+      "image_id": "9023348",
+      "joint": "pip4",
+      "kl": 1
+    },
+    {
+      "image_name": "9900971_pip2.png",
+      "image_id": "9900971",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9005413_pip3.png",
+      "image_id": "9005413",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9152688_pip5.png",
+      "image_id": "9152688",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9020714_mcp2.png",
+      "image_id": "9020714",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9030925_dip3.png",
+      "image_id": "9030925",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9086407_pip3.png",
+      "image_id": "9086407",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9943818_dip2.png",
+      "image_id": "9943818",
+      "joint": "dip2",
+      "kl": 2
+    },
+    {
+      "image_name": "9951821_dip2.png",
+      "image_id": "9951821",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9088841_pip4.png",
+      "image_id": "9088841",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9207016_pip5.png",
+      "image_id": "9207016",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9018489_pip3.png",
+      "image_id": "9018489",
+      "joint": "pip3",
+      "kl": 1
+    },
+    {
+      "image_name": "9903394_pip2.png",
+      "image_id": "9903394",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9073948_dip4.png",
+      "image_id": "9073948",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9068894_pip3.png",
+      "image_id": "9068894",
+      "joint": "pip3",
+      "kl": 1
+    },
+    {
+      "image_name": "9068453_pip4.png",
+      "image_id": "9068453",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9063928_pip3.png",
+      "image_id": "9063928",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9170920_pip5.png",
+      "image_id": "9170920",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9806159_dip3.png",
+      "image_id": "9806159",
+      "joint": "dip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9954184_dip2.png",
+      "image_id": "9954184",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9065433_mcp5.png",
+      "image_id": "9065433",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9004175_mcp4.png",
+      "image_id": "9004175",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9066677_dip5.png",
+      "image_id": "9066677",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9024409_pip5.png",
+      "image_id": "9024409",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9130641_pip4.png",
+      "image_id": "9130641",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9066677_mcp2.png",
+      "image_id": "9066677",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9006140_mcp4.png",
+      "image_id": "9006140",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9079361_pip3.png",
+      "image_id": "9079361",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9407138_dip2.png",
+      "image_id": "9407138",
+      "joint": "dip2",
+      "kl": 4
+    },
+    {
+      "image_name": "9046012_dip4.png",
+      "image_id": "9046012",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9021791_mcp3.png",
+      "image_id": "9021791",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9008820_dip3.png",
+      "image_id": "9008820",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9055038_mcp5.png",
+      "image_id": "9055038",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9870569_pip3.png",
+      "image_id": "9870569",
+      "joint": "pip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9096851_pip4.png",
+      "image_id": "9096851",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9113529_pip4.png",
+      "image_id": "9113529",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9249027_dip5.png",
+      "image_id": "9249027",
+      "joint": "dip5",
+      "kl": 2
+    },
+    {
+      "image_name": "9066425_mcp5.png",
+      "image_id": "9066425",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9942319_dip2.png",
+      "image_id": "9942319",
+      "joint": "dip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9009927_mcp5.png",
+      "image_id": "9009927",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9023348_mcp2.png",
+      "image_id": "9023348",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9477205_dip2.png",
+      "image_id": "9477205",
+      "joint": "dip2",
+      "kl": 3
+    },
+    {
+      "image_name": "9798629_dip3.png",
+      "image_id": "9798629",
+      "joint": "dip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9206908_pip5.png",
+      "image_id": "9206908",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9973322_mcp5.png",
+      "image_id": "9973322",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9008934_mcp5.png",
+      "image_id": "9008934",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9953183_dip2.png",
+      "image_id": "9953183",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9066425_mcp3.png",
+      "image_id": "9066425",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9119057_pip3.png",
+      "image_id": "9119057",
+      "joint": "pip3",
+      "kl": 1
+    },
+    {
+      "image_name": "9049507_mcp4.png",
+      "image_id": "9049507",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9907544_pip2.png",
+      "image_id": "9907544",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9193863_dip5.png",
+      "image_id": "9193863",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9088841_pip3.png",
+      "image_id": "9088841",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9072956_pip5.png",
+      "image_id": "9072956",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9555124_dip3.png",
+      "image_id": "9555124",
+      "joint": "dip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9011115_dip4.png",
+      "image_id": "9011115",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9044005_mcp4.png",
+      "image_id": "9044005",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9067425_pip3.png",
+      "image_id": "9067425",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9093244_pip4.png",
+      "image_id": "9093244",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9034991_dip4.png",
+      "image_id": "9034991",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9903020_pip2.png",
+      "image_id": "9903020",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9368286_dip3.png",
+      "image_id": "9368286",
+      "joint": "dip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9047519_mcp2.png",
+      "image_id": "9047519",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9897279_pip2.png",
+      "image_id": "9897279",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9006723_dip4.png",
+      "image_id": "9006723",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9008934_mcp2.png",
+      "image_id": "9008934",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9255567_dip5.png",
+      "image_id": "9255567",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9907012_pip2.png",
+      "image_id": "9907012",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9000099_dip2.png",
+      "image_id": "9000099",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9002430_mcp5.png",
+      "image_id": "9002430",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9954735_dip2.png",
+      "image_id": "9954735",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9044005_pip5.png",
+      "image_id": "9044005",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9654655_pip4.png",
+      "image_id": "9654655",
+      "joint": "pip4",
+      "kl": 3
+    },
+    {
+      "image_name": "9896772_pip2.png",
+      "image_id": "9896772",
+      "joint": "pip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9148828_mcp5.png",
+      "image_id": "9148828",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9029913_dip2.png",
+      "image_id": "9029913",
+      "joint": "dip2",
+      "kl": 3
+    },
+    {
+      "image_name": "9942553_dip2.png",
+      "image_id": "9942553",
+      "joint": "dip2",
+      "kl": 2
+    },
+    {
+      "image_name": "9985321_mcp4.png",
+      "image_id": "9985321",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9030418_dip4.png",
+      "image_id": "9030418",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9072956_dip4.png",
+      "image_id": "9072956",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9407138_pip4.png",
+      "image_id": "9407138",
+      "joint": "pip4",
+      "kl": 4
+    },
+    {
+      "image_name": "9193863_pip5.png",
+      "image_id": "9193863",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9068453_dip4.png",
+      "image_id": "9068453",
+      "joint": "dip4",
+      "kl": 0
+    }
   ],
   "val": [
-    "9034991_dip4.png",
-    "9944030_dip2.png",
-    "9258563_dip5.png",
-    "9030418_dip4.png",
-    "9067425_mcp4.png",
-    "9101076_pip5.png",
-    "9020714_mcp2.png",
-    "9243198_dip5.png",
-    "9938453_dip2.png",
-    "9055038_mcp5.png",
-    "9150876_pip3.png",
-    "9006723_dip3.png",
-    "9034991_dip3.png",
-    "9942724_dip2.png",
-    "9023348_pip4.png",
-    "9023407_mcp2.png",
-    "9113529_pip5.png",
-    "9003175_mcp3.png",
-    "9906491_pip2.png",
-    "9055038_mcp3.png",
-    "9101076_pip3.png",
-    "9049507_mcp4.png",
-    "9225871_pip4.png",
-    "9907998_pip2.png",
-    "9985321_mcp2.png",
-    "9011115_dip4.png",
-    "9058960_pip5.png",
-    "9255567_dip5.png",
-    "9988305_pip5.png",
-    "9004175_mcp4.png",
-    "9075939_mcp5.png",
-    "9065433_dip5.png",
-    "9043005_dip3.png",
-    "9896772_pip2.png",
-    "9065820_dip4.png",
-    "9044005_mcp5.png",
-    "9023348_dip3.png",
-    "9954184_dip2.png"
+    {
+      "image_name": "9906491_pip2.png",
+      "image_id": "9906491",
+      "joint": "pip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9006140_mcp2.png",
+      "image_id": "9006140",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9047519_mcp4.png",
+      "image_id": "9047519",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9243198_dip5.png",
+      "image_id": "9243198",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9065820_dip4.png",
+      "image_id": "9065820",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9047519_pip3.png",
+      "image_id": "9047519",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9002316_dip3.png",
+      "image_id": "9002316",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9087632_mcp2.png",
+      "image_id": "9087632",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9048898_pip5.png",
+      "image_id": "9048898",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9249027_pip4.png",
+      "image_id": "9249027",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9942724_dip2.png",
+      "image_id": "9942724",
+      "joint": "dip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9048898_pip3.png",
+      "image_id": "9048898",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9043446_mcp2.png",
+      "image_id": "9043446",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9091337_dip5.png",
+      "image_id": "9091337",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9300088_pip3.png",
+      "image_id": "9300088",
+      "joint": "pip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9023407_pip4.png",
+      "image_id": "9023407",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9020714_mcp3.png",
+      "image_id": "9020714",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9008934_mcp4.png",
+      "image_id": "9008934",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9020856_mcp2.png",
+      "image_id": "9020856",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9951284_dip2.png",
+      "image_id": "9951284",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9049999_mcp5.png",
+      "image_id": "9049999",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9645608_dip3.png",
+      "image_id": "9645608",
+      "joint": "dip3",
+      "kl": 4
+    },
+    {
+      "image_name": "9042459_dip3.png",
+      "image_id": "9042459",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9953518_dip2.png",
+      "image_id": "9953518",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9049999_pip5.png",
+      "image_id": "9049999",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9943317_dip2.png",
+      "image_id": "9943317",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9947497_dip2.png",
+      "image_id": "9947497",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9020404_mcp2.png",
+      "image_id": "9020404",
+      "joint": "mcp2",
+      "kl": 1
+    },
+    {
+      "image_name": "9025191_dip3.png",
+      "image_id": "9025191",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9075939_mcp5.png",
+      "image_id": "9075939",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9054972_pip3.png",
+      "image_id": "9054972",
+      "joint": "pip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9596105_dip2.png",
+      "image_id": "9596105",
+      "joint": "dip2",
+      "kl": 4
+    },
+    {
+      "image_name": "9034991_dip3.png",
+      "image_id": "9034991",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9011420_mcp4.png",
+      "image_id": "9011420",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9047519_mcp3.png",
+      "image_id": "9047519",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9162906_pip4.png",
+      "image_id": "9162906",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9905383_pip2.png",
+      "image_id": "9905383",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9729094_dip2.png",
+      "image_id": "9729094",
+      "joint": "dip2",
+      "kl": 3
+    },
+    {
+      "image_name": "9009927_mcp4.png",
+      "image_id": "9009927",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9949194_dip2.png",
+      "image_id": "9949194",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9906008_pip2.png",
+      "image_id": "9906008",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9043446_pip3.png",
+      "image_id": "9043446",
+      "joint": "pip3",
+      "kl": 2
+    },
+    {
+      "image_name": "9150876_pip3.png",
+      "image_id": "9150876",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9008934_dip5.png",
+      "image_id": "9008934",
+      "joint": "dip5",
+      "kl": 0
+    }
   ],
   "test": [
-    "9193863_dip5.png",
-    "9030925_dip3.png",
-    "9063928_pip3.png",
-    "9088414_dip5.png",
-    "9951449_dip2.png",
-    "9068197_dip4.png",
-    "9072956_pip5.png",
-    "9206908_dip5.png",
-    "9072956_dip5.png",
-    "9020404_mcp2.png",
-    "9905383_pip2.png",
-    "9065433_mcp5.png",
-    "9907012_pip2.png",
-    "9224866_dip5.png",
-    "9228372_dip5.png",
-    "9000099_dip2.png",
-    "9907767_pip2.png",
-    "9005413_pip3.png",
-    "9023348_pip3.png",
-    "9024900_mcp3.png",
-    "9058469_mcp3.png",
-    "9066425_mcp2.png",
-    "9023407_mcp3.png",
-    "9174582_pip5.png",
-    "9152688_pip5.png",
-    "9066425_mcp5.png",
-    "9066677_dip4.png",
-    "9022408_mcp4.png",
-    "9036287_mcp5.png",
-    "9067913_pip5.png",
-    "9044005_dip3.png",
-    "9951284_dip2.png",
-    "9009927_mcp5.png",
-    "9907800_pip2.png",
-    "9002430_mcp2.png",
-    "9024409_mcp4.png",
-    "9951821_dip2.png",
-    "9029415_mcp5.png",
-    "9068894_pip3.png",
-    "9009927_mcp4.png"
+    {
+      "image_name": "9896392_pip2.png",
+      "image_id": "9896392",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9024900_mcp4.png",
+      "image_id": "9024900",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9980752_dip5.png",
+      "image_id": "9980752",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9023348_pip3.png",
+      "image_id": "9023348",
+      "joint": "pip3",
+      "kl": 1
+    },
+    {
+      "image_name": "9068197_dip4.png",
+      "image_id": "9068197",
+      "joint": "dip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9013634_dip3.png",
+      "image_id": "9013634",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9390205_pip4.png",
+      "image_id": "9390205",
+      "joint": "pip4",
+      "kl": 3
+    },
+    {
+      "image_name": "9952108_dip2.png",
+      "image_id": "9952108",
+      "joint": "dip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9061936_mcp4.png",
+      "image_id": "9061936",
+      "joint": "mcp4",
+      "kl": 0
+    },
+    {
+      "image_name": "9065433_mcp3.png",
+      "image_id": "9065433",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9003380_dip3.png",
+      "image_id": "9003380",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9029415_mcp5.png",
+      "image_id": "9029415",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9902757_pip2.png",
+      "image_id": "9902757",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9036287_mcp5.png",
+      "image_id": "9036287",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9024409_mcp2.png",
+      "image_id": "9024409",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9088414_dip5.png",
+      "image_id": "9088414",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9024900_mcp3.png",
+      "image_id": "9024900",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9255353_pip4.png",
+      "image_id": "9255353",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9009927_mcp3.png",
+      "image_id": "9009927",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9003316_mcp3.png",
+      "image_id": "9003316",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9184790_pip4.png",
+      "image_id": "9184790",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9084244_mcp2.png",
+      "image_id": "9084244",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9224866_dip5.png",
+      "image_id": "9224866",
+      "joint": "dip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9407138_dip3.png",
+      "image_id": "9407138",
+      "joint": "dip3",
+      "kl": 4
+    },
+    {
+      "image_name": "9024900_mcp2.png",
+      "image_id": "9024900",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9985321_mcp2.png",
+      "image_id": "9985321",
+      "joint": "mcp2",
+      "kl": 0
+    },
+    {
+      "image_name": "9008934_pip5.png",
+      "image_id": "9008934",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9171714_pip4.png",
+      "image_id": "9171714",
+      "joint": "pip4",
+      "kl": 0
+    },
+    {
+      "image_name": "9010370_dip3.png",
+      "image_id": "9010370",
+      "joint": "dip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9798629_dip2.png",
+      "image_id": "9798629",
+      "joint": "dip2",
+      "kl": 3
+    },
+    {
+      "image_name": "9003175_mcp3.png",
+      "image_id": "9003175",
+      "joint": "mcp3",
+      "kl": 0
+    },
+    {
+      "image_name": "9028904_mcp5.png",
+      "image_id": "9028904",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9061936_mcp5.png",
+      "image_id": "9061936",
+      "joint": "mcp5",
+      "kl": 0
+    },
+    {
+      "image_name": "9067913_pip3.png",
+      "image_id": "9067913",
+      "joint": "pip3",
+      "kl": 2
+    },
+    {
+      "image_name": "9099360_pip3.png",
+      "image_id": "9099360",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9948792_dip2.png",
+      "image_id": "9948792",
+      "joint": "dip2",
+      "kl": 1
+    },
+    {
+      "image_name": "9902576_pip2.png",
+      "image_id": "9902576",
+      "joint": "pip2",
+      "kl": 0
+    },
+    {
+      "image_name": "9101076_pip3.png",
+      "image_id": "9101076",
+      "joint": "pip3",
+      "kl": 0
+    },
+    {
+      "image_name": "9065820_pip4.png",
+      "image_id": "9065820",
+      "joint": "pip4",
+      "kl": 1
+    },
+    {
+      "image_name": "9833330_dip3.png",
+      "image_id": "9833330",
+      "joint": "dip3",
+      "kl": 3
+    },
+    {
+      "image_name": "9113529_pip5.png",
+      "image_id": "9113529",
+      "joint": "pip5",
+      "kl": 0
+    },
+    {
+      "image_name": "9010060_mcp3.png",
+      "image_id": "9010060",
+      "joint": "mcp3",
+      "kl": 0
+    }
   ]
 }
