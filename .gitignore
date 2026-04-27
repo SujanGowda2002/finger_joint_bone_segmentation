@@ -205,3 +205,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+#To ignore the the .pth files which are more than 100MB
+outputs/checkpoints/*.pth

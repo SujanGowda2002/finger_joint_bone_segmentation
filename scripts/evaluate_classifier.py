@@ -1,7 +1,7 @@
 import os
 import sys
 import math
-
+from sklearn.metrics import balanced_accuracy_score
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Subset
@@ -91,8 +91,7 @@ def evaluate(model, loader, criterion, device):
 def main():
     image_dir = os.path.join(PROJECT_ROOT, "data", "raw", "images")
     metadata_path = os.path.join(PROJECT_ROOT, "data", "raw", "Hand.csv")
-    checkpoint_path = os.path.join(PROJECT_ROOT, "outputs", "checkpoints", "best_kl_classifier.pth")
-
+    checkpoint_path = os.path.join(PROJECT_ROOT, "outputs", "checkpoints", "best_kl_classifier_macro_f1.pth")
     batch_size = 32
     num_classes = 5
 
@@ -120,6 +119,8 @@ def main():
     acc = accuracy_score(y_true, y_pred)
     macro_f1 = f1_score(y_true, y_pred, average="macro")
     weighted_f1 = f1_score(y_true, y_pred, average="weighted")
+    bal_acc = balanced_accuracy_score(y_true, y_pred)
+    within_1_acc = sum(abs(t - p) <= 1 for t, p in zip(y_true, y_pred)) / len(y_true)
     cm = confusion_matrix(y_true, y_pred)
 
     print("\n===== TEST RESULTS =====")
@@ -127,6 +128,8 @@ def main():
     print(f"Test Accuracy: {acc:.4f}")
     print(f"Macro F1: {macro_f1:.4f}")
     print(f"Weighted F1: {weighted_f1:.4f}")
+    print(f"Balanced Accuracy: {bal_acc:.4f}")
+    print(f"Within-1 Accuracy: {within_1_acc:.4f}")
 
     print("\n===== CONFUSION MATRIX =====")
     print(cm)
