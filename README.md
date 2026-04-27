@@ -255,10 +255,41 @@ Each inference script saves:
 
 ## Example Run Commands
 
+### Create Virtual Environment:
+  - For Windows System:
+    ```bash
+    python -m venv .venv
+    ```
+  - For mac/Linux/BU SCC:
+    ```bash
+    python3 -m venv .venv
+    ```
+ 
+### Activate Virtual Environment:
+- For Windows System:
+    ```bash
+    .venv\Scripts\Activate.ps1
+    ```
+
+  - For macOS/Linux/BU SCC:
+    ```bash
+    source .venv/bin/activate
+    ```
+
+
+
 ### Install Dependencies
+```bash
+python -m pip install --upgrade pip
+```
 
 ```bash
 python -m pip install -r requirements.txt
+```
+
+### Deactivate Virtual Environment (when done):
+```bash
+deactivate
 ```
 
 ### Train
