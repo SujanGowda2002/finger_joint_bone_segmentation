@@ -1,0 +1,10 @@
+{
+  "dataset_name": "Manual31_Training_Package",
+  "dataset_size": 31,
+  "epochs": 100,
+  "final_loss": 0.1858671506245931,
+  "final_dice": 0.951387753089269,
+  "final_iou": 0.908282071352005,
+  "device": "cpu",
+  "notes": "Sanity-check run on 31-pair manual-mask subset."
+}

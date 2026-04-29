@@ -1,0 +1,13 @@
+{
+  "dataset_name": "Batch-1 Dataset",
+  "dataset_size": 58,
+  "epochs": 100,
+  "final_loss": 0.06399283899615209,
+  "final_dice": 0.979537308216095,
+  "final_iou": 0.9602155337731043,
+  "final_val_loss": 0.10965331395467122,
+  "final_val_dice": 0.9629835685094198,
+  "final_val_iou": 0.9309653838475546,
+  "device": "cpu",
+  "notes": "Sanity-check run on Batch-1 Fiji pseudo-mask subset."
+}
