@@ -359,7 +359,7 @@ python scripts/jsw_center_evaluation.py
 
 ## License
 
-This project is released under the **MIT License**.
+See LICENSE.txt in project root.
 
 ---
 
